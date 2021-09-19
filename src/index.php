@@ -15,6 +15,11 @@ if ($result = $mysqli->query($sql)) {
 }
 
 //var_dump($users);
+/**
+ * Simple hash sur demande
+ */
+//$hash = password_hash('bPK@u13', PASSWORD_DEFAULT);
+//var_dump($hash);
 
 /**
  * Hash les mots de passe reçut et me donne la requete
