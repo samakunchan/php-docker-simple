@@ -23,9 +23,9 @@ services:
       - mysql-data:/var/lib/mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=sam
       - MYSQL_DATABASE=appsama
-      - MYSQL_USER=root
+      - MYSQL_USER=sam
       - MYSQL_PASSWORD=db
     ports:
       - "8082:3306"
