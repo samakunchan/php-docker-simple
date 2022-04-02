@@ -1,15 +1,29 @@
-Just cd into directory and run:
+# Mon PHP docker
 
-docker-compose up -d
+## Installation
+    
+Créer un ficher `.env` à la racine du projet avec les informations du fichier `.env.exemple`
+    
+    cp .env.exemple .env
 
-to stop:
+Lancer docker
 
-docker-compose down
+    docker compose up
+    ou
+    docker composer up -d
 
-NOTE: In order for the app to work you will have to create a database named "company1", a "users" table with the columns "name" and "fav_color" in order for the errors to go away.
+Normalement, il y a tout:
 
-You can do this in localhost:8080  (adminer) with "root" as user, "example" as password.  "MySQL" selected for the system, and "db" as the server.
+- phpmyadmin
+- mysql
+- le serveur: http://localhost:8500/
+- composer
 
-Then create the database & table and you should be able to see the php grab the users and display them.
+Le volume cible le dossier `/src`.
+<br>Il faudra mettre tout la logique dans ce dossier.
 
-https://truthseekers.io/php-docker-simple-environment/ blog post.
+## Parcourir le container du projet
+
+    docker exec -it php-server sh
+
+C'est plus simple avec le docker Desktop. Il suffit juste de cliquer sur les boutons.
