@@ -25,5 +25,7 @@ Le volume cible le dossier `/src`.
 ## Parcourir le container du projet
 
     docker exec -it php-server sh
+    puis
+    php -v ou composer -v
 
 C'est plus simple avec le docker Desktop. Il suffit juste de cliquer sur les boutons.
